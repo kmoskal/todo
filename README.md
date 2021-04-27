@@ -1,5 +1,5 @@
 # Another todo.txt variation.
-[https://github.com/todotxt/todo.txt](Github Link)
+[todo.txt](https://github.com/todotxt/todo.txt)
 #### Comand line Todo app based on todo.txt format.
 
 ---
