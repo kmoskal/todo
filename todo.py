@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 import sys
+import os
+from pathlib import Path
 import re
 
-FILE_LOCATION = 'todo.txt'
+FILE_LOCATION = str(Path.home()) + '/.todo.txt'
 
 
 class Todo:
     def __init__(self, file_location):
         self.file_location = file_location
-        with open(self.file_location, 'r') as file:
-            self.tasks_list = file.readlines()
+        # Open file if exist or creat new one
+        try:
+            with open(self.file_location, 'r') as file:
+                self.tasks_list = file.readlines()
+        except:
+            self.tasks_list = []
 
     def help(self):
         ''' Display explanations of all commands '''
